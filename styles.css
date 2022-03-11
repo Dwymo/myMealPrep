@@ -1,0 +1,155 @@
+/*
+https://coolors.co/b0b3b4-ebebeb-dae8fb-1f80ff-003780-0061e0-264d80-0058cc-51667b
+*/
+:root {
+    --silver: #c1c1c1;
+    --Silver_Chalice: #b0b3b4;
+    --Platinum: #ebebeb;
+    --Alice_Blue: #dae8fb;
+    --Azure: #1f80ff;
+    --Dark_Cornflower_Blue: #003780;
+    --Flicker_Blue: #0061e0;
+    --Yale_Blue: #264d80;
+    --Sapphire: #0058cc;
+    --Dark-Electric_Blue: #51667b;
+}
+
+
+/*Making sure the margins of the body are set to 0
+to remove any default margins implied by the browser*/
+body {
+    margin: 0;
+    padding: 0;
+
+    }
+    
+.fixed-top {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+.fixed-bottom {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+       
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    background-color: var(--Dark-Electric_Blue);
+    width: 100%;
+}
+
+.main {
+    margin: 100px auto;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2000px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    border: #003780 solid 2px;
+}
+
+
+.col-left{
+    width: 30%;
+}
+
+.meal-list-title{
+    background-color: var(--Silver_Chalice);
+    padding: 30px 0;
+}
+
+.meal-list{
+    border: var(--Silver_Chalice) solid 5px;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.meal-list-content{
+    overflow-y: scroll;
+    height: 1000px;
+}
+
+.meal-list-item{
+    padding: 40px 0;
+    background-color: var(--Platinum);
+    border: var(--silver) solid 1px;
+}
+
+.active-recipe {
+background-color: yellow;
+}
+
+.meal-list-item:hover{
+    background-color: white;
+}
+
+.col-right{
+    width: 60%;
+}
+
+.selected-meal-container{
+    border: var(--Silver_Chalice) solid 5px;
+    height: 1000px;
+}
+
+.selected-meal-head{
+    background-color: var(--Silver_Chalice);
+    padding: 30px 0;
+}
+
+.selected-meal-ingredients{
+    border: var(--Silver_Chalice) solid 5px;
+    padding: 30px 0;
+}
+
+.selected-meal-instructions{
+    margin-top: 30px;;
+}
+
+.card{
+    border: var(--Silver_Chalice) solid 2px;
+    border-radius: 5px;
+    background-color: var(--Platinum);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-text{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+li {
+}
+
+
+footer {
+    background-color: var(--Dark-Electric_Blue);
+    width: 100%;    
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="./styles.css" rel="stylesheet" />
+        <title>My Meal Prep</title>
+    </head>
+    <body>
+
+
+        <div class="main">
+            <div class="container">
+                <!--NavBar-->
+                <div class="navbar fixed-top">
+                    <h1>Navbar</h1>
+                </div>
+                
+
+                <!-- Form for Creating/Deleting Recipes  -->
+                <form class="recipe-form" data-new-recipe-form>
+                    <input type="text" data-new-recipe-input class="new-Recipe" placeholder="Enter new Recipe name"/>
+                    <button class="btn-create">Create Recipe</button>
+                    <button class="btn-delete">Delete Project</button>
+                </form>
+
+        <br/> <br/>
+                <!--Content will be split into two separate columns-->
+                <div class="row">
+                    <!--Left panel to display list of meals-->
+                    <div class="col-left">
+                        <div class="meal-list">
+                            <div class="meal-list-title">Meal List</div> 
+                            <ul class="meal-list-content" data-recipes>
+                                <li class="meal-list-item">Test</li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <!--right panel to display the seleted meal-->
+                    <div class="col-right">
+                        <div class="selected-meal-container">
+                            <div class="selected-meal-head">
+                                <h2 data-recipe-title>test</h2>
+                            </div>
+                            <div class="selected-meal-content">
+                                <div class="selected-meal-ingredients">Meal Ingredients</div>
+                                <div class="selected-meal-instructions">Meal Instructions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script defer src="script.js"></script>
+    </body>
+    </html>
