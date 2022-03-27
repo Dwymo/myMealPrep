@@ -19,7 +19,7 @@
                 <form class="recipe-form" data-new-recipe-form>
                     <input type="text" data-new-recipe-input class="new-Recipe" placeholder="Enter new Recipe name"/>
                     <button class="btn-create">Create Recipe</button>
-                    <button class="btn-delete">Delete Project</button>
+                    <button data-delete-recipe-button>Delete Project</button>
                 </form>
 
         <br/> <br/>
@@ -37,12 +37,36 @@
                     <!--right panel to display the seleted meal-->
                     <div class="col-right">
                         <div class="selected-meal-container">
+                            <!--Divide the selected meal into three sections: Title, ingredients, instructions-->
+                            <!--Title-->
                             <div class="selected-meal-head">
                                 <h2 data-recipe-title>test</h2>
                             </div>
-                            <div class="selected-meal-content">
-                                <div class="selected-meal-ingredients">Meal Ingredients</div>
-                                <div class="selected-meal-instructions">Meal Instructions</div>
+                            <!--Ingredients-->
+                            <div class="selected-meal-ingredients-container">
+                                <!-- Form for Adding/Removing Ingredients -->
+                                <form class="selected-meal-ingredients-form" data-new-ingredient-form>
+                                    <input type="text" data-new-ingredient-name-input class="new-ingredient-name" placeholder="Enter new ingredient name"/>
+                                    <input type="text" data-new-ingredient-type-input class="new-ingredient-type" placeholder="Enter new ingredient type"/>
+                                    <input type="text" data-new-ingredient-amount-input class="new-ingredient-amount" placeholder="Enter new amount"/>
+                                    <button class="btn-add-ingredient">Add Ingredient</button>
+                                    <button data-delete-ingredient-button>Remove Ingredient</button>
+                                </form>
+                                <!--container to display the ingredients-->
+                                <div class="selected-meal-ingredients-content" data-ingredients-list>
+                                </div>
+                            </div>
+                            <!--Instructions-->
+                            <div class="selected-meal-instructions-container">
+                                <!-- Form for Adding/Removing Instructions -->
+                                <form class="selected-meal-instructions-form" data-new-instructions-form>
+                                    <input type="text" data-new-instructions-input class="new-instruction" placeholder="Enter new ingredient name"/>
+                                    <button class="btn-add-instructions">Add Instruction</button>
+                                    <button data-delete-instruction-button>Remove Instruction</button>
+                                </form>
+                                <!--container to display the Instructions-->
+                                <div class="selected-meal-instructions-content" data-instructions-list>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -86,6 +86,7 @@ body {
 .meal-list-content{
     overflow-y: scroll;
     height: 1000px;
+    list-style: none;
 }
 
 .meal-list-item{
@@ -95,7 +96,7 @@ body {
 }
 
 .active-recipe {
-background-color: yellow;
+background-color: var(--Alice_Blue);
 }
 
 .meal-list-item:hover{
@@ -116,14 +117,29 @@ background-color: yellow;
     padding: 30px 0;
 }
 
-.selected-meal-ingredients{
+.selected-meal-content-container{
     border: var(--Silver_Chalice) solid 5px;
-    padding: 30px 0;
+    min-height: 800px;
 }
 
-.selected-meal-instructions{
-    margin-top: 30px;;
+.selected-meal-ingredients-container{
+    padding-top: 20px;
+    border: var(--Silver_Chalice) solid 3px;
 }
+
+.selected-meal-ingredients-content{
+    border: var(--Silver_Chalice) solid 1px;
+    margin-top: 10px;
+    min-height: 100px;
+    list-style: none;
+}
+
+
+
+
+
+
+
 
 .card{
     border: var(--Silver_Chalice) solid 2px;
@@ -144,10 +160,6 @@ background-color: yellow;
     font-weight: bold;
     font-size: 32px;
 }
-
-li {
-}
-
 
 footer {
     background-color: var(--Dark-Electric_Blue);
