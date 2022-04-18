@@ -53,10 +53,12 @@ const newIngredientNameInput = document.querySelector('[data-new-ingredient-name
 const newIngredientTypeInput = document.querySelector('[data-new-ingredient-type-input]')
 const newIngredientAmountInput = document.querySelector('[data-new-ingredient-amount-input]')
 const recipeIngredientsContainer = document.querySelector('[data-ingredients-list]')
+const deleteIngredient = document.querySelector('[data-delete-ingredient-button]');
 
 const recipeInstructionsContainer = document.querySelector('[data-instructions-list]')
 const newInstructionForm = document.querySelector('[data-new-instructions-form]')
 const newInstructionInput = document.querySelector('[data-new-instructions-input]')
+const deleteInstruction = document.querySelector('[data-delete-instruction-button]');
 
 //getting the recipe list aswell as the selected recipe list from local storage
 const LOCAL_STORAGE_LIST_KEY = 'meal.list'
@@ -107,7 +109,6 @@ deleteRecipe.addEventListener('click', e => {
      //save the new list of recipies and re0load the webpage
      save()
      render()
-
 })
   
 
@@ -147,6 +148,19 @@ function createIngredient(name, type, amount) {
     return  {id: Date.now().toString(), name: name, type: type, amount: amount}
   }
 
+  //add an event listener for when pressing the delete button
+deleteIngredient.addEventListener('click', e => {
+    //locate the selected recipe
+    const selectedRecipe = recipes.find(recipe => recipe.id == selectedRecipeId)
+    //locate the recipies ingredient to remove
+    ingredient = selectedRecipe.ingredients.length - 1;
+    //remove located ingredient
+    selectedRecipe.ingredients.pop(ingredient)
+    //save the new list of ingredients and re-load the webpage
+    save()
+    render()
+})
+
   //add an event listener to the specified to take action when creating a new recipe
 newInstructionForm.addEventListener('submit', e => {
     //stop any default action's - such as refreshing the page 
@@ -172,6 +186,19 @@ newInstructionForm.addEventListener('submit', e => {
   function createInstruction(instruction) {
     return  {id: Date.now().toString(), instruction: instruction}
   }
+
+    //add an event listener for when pressing the delete button
+deleteInstruction.addEventListener('click', e => {
+    //locate the selected recipe
+    const selectedRecipe = recipes.find(recipe => recipe.id == selectedRecipeId)
+    //locate the recipies ingredient to remove
+    instruction = selectedRecipe.instructions.length - 1;
+    //remove located ingredient
+    selectedRecipe.instructions.pop(instruction)
+    //save the new list of ingredients and re-load the webpage
+    save()
+    render()
+})
 
 //Render entire page
 function render() {

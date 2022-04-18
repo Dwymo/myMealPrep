@@ -5,13 +5,11 @@
         <title>My Meal Prep</title>
     </head>
     <body>
-
-
         <div class="main">
             <div class="container">
                 <!--NavBar-->
                 <div class="navbar fixed-top">
-                    <h1>Navbar</h1>
+                    <h1>My Meal Prep</h1>
                 </div>
                 
 
@@ -22,7 +20,7 @@
                     <button data-delete-recipe-button>Delete Project</button>
                 </form>
 
-        <br/> <br/>
+                <br/> <br/>
                 <!--Content will be split into two separate columns-->
                 <div class="row">
                     <!--Left panel to display list of meals-->
@@ -50,7 +48,7 @@
                                     <input type="text" data-new-ingredient-type-input class="new-ingredient-type" placeholder="Enter new ingredient type"/>
                                     <input type="text" data-new-ingredient-amount-input class="new-ingredient-amount" placeholder="Enter new amount"/>
                                     <button class="btn-add-ingredient">Add Ingredient</button>
-                                    <button data-delete-ingredient-button>Remove Ingredient</button>
+                                    <button data-delete-ingredient-button>Remove Last Ingredient</button>
                                 </form>
                                 <!--container to display the ingredients-->
                                 <div class="selected-meal-ingredients-content" data-ingredients-list>
@@ -60,9 +58,9 @@
                             <div class="selected-meal-instructions-container">
                                 <!-- Form for Adding/Removing Instructions -->
                                 <form class="selected-meal-instructions-form" data-new-instructions-form>
-                                    <input type="text" data-new-instructions-input class="new-instruction" placeholder="Enter new ingredient name"/>
+                                    <input type="text" data-new-instructions-input class="new-instruction" placeholder="Enter new Instuction"/>
                                     <button class="btn-add-instructions">Add Instruction</button>
-                                    <button data-delete-instruction-button>Remove Instruction</button>
+                                    <button data-delete-instruction-button>Remove Last Instruction</button>
                                 </form>
                                 <!--container to display the Instructions-->
                                 <div class="selected-meal-instructions-content" data-instructions-list>
